@@ -22,5 +22,6 @@
     }
 
   },
-  "default_locale": "en-US"
+  "default_locale": "en-US",
+  "cursor": true
 }
