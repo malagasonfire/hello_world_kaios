@@ -23,5 +23,6 @@
 
   },
   "default_locale": "en-US",
-  "cursor": true
+  "cursor": true,
+  "ime_default_softkey_bar": true
 }
