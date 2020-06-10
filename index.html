@@ -10,33 +10,30 @@
     /*  body {
         border: 1px solid black;
       }*/
-    footer.softkey,
-    #softkey-left,
-    #softkey-center,
-    #softkey-right
-      {
+    .softkey {
+	 display: flex;
+	 align-content: center;
+	 justify-content: space-between;
 	 position: fixed;
 	 bottom: 0;
 	 left: 0;
 	 width: 100%;
 	}
-    #softkey-left{
+    .softkey > #softkey-left {
 	text-align: left;
 	font-size: 15px;
 	color: #008AE6;
      }
-    #softkey-center{
+    .softkey > #softkey-center {
 	text-align: center;
 	font-size: 19px;
 	color: #3333FF;
      }
-     #softkey-right{
+     .softkey > #softkey-right {
 	text-align: right;
 	font-size: 15px;	
 	color: black;
      }
-
-
 
 
       h1 {
@@ -47,10 +44,16 @@
       }
 
 
-     table {
-        border: 1px solid #3333FF;
-	text-align: center;
-      }
+	.flex-container {
+	   display: flex;
+	   flex-direction: column;
+	   justify-content: center;
+	   border: 1px solid #3333FF;
+	 }
+
+	.flex-container > div {
+		text-align: center;
+	}		
 
     </style>
 
@@ -64,30 +67,13 @@
     <!-- This code is in the public domain. Enjoy! -->
     <h1>Hello World</h1>
 
-    <table>
-	<tr>
-		<td>
-			This is a hello world for KaiOS
-		</td>
+	<div class="flex-container"/> 
+		<div>This is a hello world for KaiOS</div>
+		<div><input tabindex="1" type=button onclick="msg()" value="Hello" ></input></div>
+		<div><input id="key-alert" tabindex="2" type=text value="key" disabled></input></div>
+	</div>
 
-
-	</tr>
-	<tr>
-		<td>
-			<input tabindex="1" type=button onclick="msg()" value="Hello" >
-			</input>
-		</td>
-	</tr>
-	<tr>
-		<td>
-			<input id="key-alert" tabindex="2" type=text value="key" disabled>
-			</input>
-		</td>
-	</tr>
-
-    </table>
-
-    <footer class="softkey">
+    <div class="softkey">
   	<div id="softkey-left">Back</div>
   	<div id="softkey-center">Select</div>
   	<div id="softkey-right">Options</div>
