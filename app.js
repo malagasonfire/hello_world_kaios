@@ -10,6 +10,29 @@ function msg(){
   alert("Hello World!!");
 }
 
+/**
+* @brief Put focus / change tab index on cursor over item 
+*
+* @param move
+*
+* @return 
+*/
+
+function nav (move){
+
+	const currIndex = document.activeElement.tabIndex;
+	const nextPos 	= currIndex + move;
+	
+	document.getElementById("dpad-status").value = "";
+	const valueCurr = "CurrIndex:" + currIndex + "\n";
+	const valueNext = "NextIndex:" + nextPos + "\n";
+	const valueConcat = valueCurr + valueNext;
+
+	document.getElementById("dpad-status").value = valueConcat;
+}
+
+
+
 
 /**
 * @brief KeyDown Handler
@@ -43,12 +66,30 @@ function handleKeyDown(et) {
 			document.getElementById("key-alert").value = "SoftRight"
 		break;
 
+		case 'ArrowUp':
+			nav(-1);
+		break;
+		
+		case 'ArrowDown':
+			nav(1);
+		break;
+
+		case 'ArrowRight':
+			nav(-1);
+		break;
+
+		case 'ArrowLeft':
+			nav(1);
+		break;
+
+
 	}		
 
 };
 
 
 document.addEventListener("keydown", handleKeyDown);
+
 
 
 
