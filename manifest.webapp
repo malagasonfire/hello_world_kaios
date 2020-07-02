@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "name": "Hello KaiOS",
+  "name": "hello_world",
   "description": "A Hello World app for KaiOS",
   "type": "web",
   "launch_path": "/index.html",
