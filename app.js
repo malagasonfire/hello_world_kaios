@@ -27,8 +27,15 @@ function nav (move){
 	const valueCurr = "CurrIndex:" + currIndex + "\n";
 	const valueNext = "NextIndex:" + nextPos + "\n";
 	const valueConcat = valueCurr + valueNext;
-
 	document.getElementById("dpad-status").value = valueConcat;
+	
+	const itemsList = document.querySelectorAll(".flex-container");
+
+	const itemSelect = itemsList[nextPos];
+
+	itemSelect.focus();
+	
+
 }
 
 
