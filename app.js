@@ -31,9 +31,11 @@ function nav (move){
 	
 	const itemsList = document.querySelectorAll(".flex-container");
 
-	const itemSelect = itemsList[nextPos];
+	const itemSelectPrev = itemsList[currIndex];
+	const itemSelectNext = itemsList[nextPos];
 
-	itemSelect.focus();
+	itemSelectNext.blur();
+	itemSelectPrev.focus();
 	
 
 }
