@@ -23,16 +23,21 @@ function nav (move){
 	const currIndex = document.activeElement.tabIndex;
 	const nextPos 	= currIndex + move;
 	
+	const itemsList = document.querySelectorAll(".nav-items");
+
+	/* visual debug on locked textarea*/
 	document.getElementById("dpad-status").value = "";
 	const valueCurr = "CurrIndex:" + currIndex + "\n";
 	const valueNext = "NextIndex:" + nextPos + "\n";
-	const valueConcat = valueCurr + valueNext;
+	const valueLen = "ItemLength:" + itemsList.length + "\n";
+	const valueConcat = valueCurr + valueNext + valueLen;
 	document.getElementById("dpad-status").value = valueConcat;
 	
-	const itemsList = document.querySelectorAll(".nav-items");
+	itemsList[currIndex].style.backgroundColor = "red";
+	itemsList[nextPos].style.backgroundColor   = "yellow";
 
-	itemsList[currIndex].blur();
-	itemsList[nextPos].focus();
+	/*itemsList[currIndex].blur();
+	itemsList[nextPos].focus();*/
 
 }
 
