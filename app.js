@@ -4,6 +4,7 @@ var keyRight
 
 window.addEventListener("load", function() {
   console.log("Hello World!");
+	document.getElementById("hello-btn").focus();		
 });
 
 function msg(){
@@ -36,8 +37,8 @@ function nav (move){
 	itemsList[currIndex].style.backgroundColor = "red";
 	itemsList[nextPos].style.backgroundColor   = "yellow";
 
-	/*itemsList[currIndex].blur();
-	itemsList[nextPos].focus();*/
+	itemsList[currIndex].blur();
+	itemsList[nextPos].focus();
 
 }
 
@@ -76,6 +77,16 @@ function handleKeyDown(et) {
 			document.getElementById("key-alert").value = "SoftRight"
 		break;
 
+	
+
+	}		
+
+};
+
+function handleActiveKeyDown(ev){
+
+	switch(ev.key){
+	
 		case 'ArrowUp':
 			nav(-1);
 		break;
@@ -92,12 +103,11 @@ function handleKeyDown(et) {
 			nav(1);
 		break;
 
-
-	}		
-
+	}
 };
 
 
+document.activeElement.addEventListener("keydown", handleActiveKeyDown);
 document.addEventListener("keydown", handleKeyDown);
 
 
