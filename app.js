@@ -4,7 +4,7 @@ var keyRight
 
 window.addEventListener("load", function() {
   console.log("Hello World!");
-	document.getElementById("hello-btn").focus();		
+	document.getElementById("descr-txr").focus();		
 });
 
 function msg(){
