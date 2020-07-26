@@ -7,45 +7,56 @@
     <title>Hello World</title>
 
     <style>
-    /*  body {
-        border: 1px solid black;
-      }*/
-    .softkey {
-	 display: flex;
-	 align-content: center;
-	 align-items: flex-end;
-	 justify-content: space-between;
-	 position: absolute;
-	 bottom: 0;
-	 left: 0;
-	 width: 100%;
-	}
-    .softkey > #softkey-left {
-	text-align: left;
-	font-size: 15px;
-	color: #008AE6;
-     }
-    .softkey > #softkey-center {
-	text-align: center;
-	font-size: 19px;
-	color: #3333FF;
-     }
-     .softkey > #softkey-right {
-	text-align: right;
-	font-size: 15px;	
-	color: black;
-     }
-
-
-      h1 {
-        border: 2px solid #FF1A1A;
-	text-align: center;
-        color: #FFFFFF;
-        background-color: #008AE6;
+      body {
+        background-color: white;
       }
+	
+	@media only screen and (orientation: portrait){
+		body{
+			background-color: lightblue;
+		}
+	}
+
+	.softkey {
+	     display: flex;
+	     align-content: center;
+	     align-items: flex-end;
+	     justify-content: space-between;
+	     position: absolute;
+	     bottom: 0;
+	     left: 0;
+	     width: 100%;
+	}
+
+	.softkey > #softkey-left {
+	    text-align: left;
+	    font-size: 15px;
+	    color: #008AE6;
+	}
+
+	.softkey > #softkey-center {
+	    text-align: center;
+	    font-size: 19px;
+	    color: #3333FF;
+	}
+
+	 .softkey > #softkey-right {
+	    text-align: right;
+	    font-size: 15px;	
+	    color: black;
+	}
+
+
+	h1 {
+            border: 2px solid #FF1A1A;
+ 	    text-align: center;
+            color: #FFFFFF;
+            background-color: #008AE6;
+	}
 
 
 	.flex-container {
+
 	   display: flex;
 	   flex-direction: column;
 	   justify-content: center;
@@ -56,6 +67,7 @@
 		text-align: center;
 	}		
 
+ 
     </style>
 
     <!-- Inline scripts are forbidden in Firefox OS apps (CSP restrictions),
