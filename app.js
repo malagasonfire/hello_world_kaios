@@ -3,8 +3,9 @@ var keyCenter
 var keyRight
 
 window.addEventListener("load", function() {
-  console.log("Hello World!");
-	document.getElementById("descr-txr").focus();		
+  	/*alert("Hello World!!\n Demo");*/
+	console.log("Hello World!");
+	document.getElementById("hello-btn").focus();
 });
 
 function msg(){
@@ -34,8 +35,11 @@ function nav (move){
 	const valueConcat = valueCurr + valueNext + valueLen;
 	document.getElementById("dpad-status").value = valueConcat;
 	
-	itemsList[currIndex].style.backgroundColor = "red";
-	itemsList[nextPos].style.backgroundColor   = "yellow";
+	/* shade direction flow */
+	if ( (currIndex - nextPos < 0)  ) 
+		itemsList[nextPos].style.backgroundColor = "red";
+	else
+		itemsList[nextPos].style.backgroundColor   = "yellow";
 
 	itemsList[currIndex].blur();
 	itemsList[nextPos].focus();
