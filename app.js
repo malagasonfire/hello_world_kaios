@@ -12,6 +12,20 @@ function msg(){
   alert("Hello World!!");
 }
 
+function OpenBackWindow(){
+
+	var txt = document.getElementById("dpad-status").value;
+	var bwc = window.confirm("Exit App?");
+	if (bwc){
+		txt +="\nExited\n";
+	}else{
+		txt +="\nExit Cancelled\n";
+	}
+	
+	document.getElementById("dpad-status").value += txt;
+}
+
+
 /**
 * @brief Put focus / change tab index on cursor over item 
 *
@@ -64,7 +78,8 @@ function handleKeyDown(et) {
 	switch (et.key)
 	{
 		case 'SoftLeft':
-			window.alert("Left softkey has been pressed");
+		//	window.alert("Left softkey has been pressed");
+			OpenBackWindow();
 			document.getElementById("key-alert").value = "";
 			document.getElementById("key-alert").value = "SoftLeft";
 		break;
