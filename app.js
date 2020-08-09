@@ -18,6 +18,7 @@ function OpenBackWindow(){
 	var bwc = window.confirm("Exit App?");
 	if (bwc){
 		txt +="\nExited\n";
+		window.close();
 	}else{
 		txt +="\nExit Cancelled\n";
 	}
