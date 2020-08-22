@@ -26,6 +26,15 @@ function OpenBackWindow(){
 	document.getElementById("dpad-status").value += txt;
 }
 
+function OpenRightWindow(){
+	
+	var srw = window.open("", "MsgBox", "width=240,height=240");
+	srw.document.write ( "<h3> Credits</h3>");
+	srw.document.write ( "<p> BananaHackers </p>");
+	srw.document.write ( "<p> Malagas </p>");
+	
+}
+
 
 /**
 * @brief Put focus / change tab index on cursor over item 
@@ -92,7 +101,8 @@ function handleKeyDown(et) {
 		break;
 	
 		case 'SoftRight':
-			window.alert("Right softkey has been pressed");
+	//		window.alert("Right softkey has been pressed");
+			OpenRightWindow();
 			document.getElementById("key-alert").value = "";
 			document.getElementById("key-alert").value = "SoftRight"
 		break;
